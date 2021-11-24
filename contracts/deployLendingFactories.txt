@@ -1,0 +1,24 @@
+brownie console --network ftm-test
+
+accounts.load("dev")
+token = Token.deploy("DOJ", "DOJ", {"from": accounts[0]})
+base = Token.deploy("STABLE", "TEST", {"from": accounts[0]})
+base.mint(accounts[0], {"from": accounts[0]})
+token.mint(accounts[0], {"from": accounts[0]})
+
+timePerEpoch = 60*60*24
+
+lendFactory = lendFactory.deploy(accounts[0], 20, {"from": accounts[0]})
+
+token.approve(lendFactory.address, 100000000e18)
+base.approve(lendFactory.address, 100000000e18)
+
+lendFactory.createLoan(accounts[0], accounts[0], base, token, 10000, 10000, 11000, 3600, True, 2000)
+
+loan = simpleLend.at(lendFactory.loans(1))
+token.approve(loan, 100000000e18)
+base.approve(loan, 100000000e18)
+
+loan.provideDebt({"from": accounts[0]})
+
+loan.repayDebt({"from": accounts[0]})

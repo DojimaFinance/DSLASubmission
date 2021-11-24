@@ -1,0 +1,519 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_base",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_quote",
+          "type": "string"
+        }
+      ],
+      "name": "getReferenceData",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "rate",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "lastUpdatedBase",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "lastUpdatedQuote",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct IBandProtocol.ReferenceData",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string[]",
+          "name": "_bases",
+          "type": "string[]"
+        },
+        {
+          "internalType": "string[]",
+          "name": "_quotes",
+          "type": "string[]"
+        }
+      ],
+      "name": "getReferenceDataBulk",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "rate",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "lastUpdatedBase",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "lastUpdatedQuote",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct IBandProtocol.ReferenceData[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "ast": {
+    "absolutePath": "interfaces/bandprotocol.sol",
+    "exportedSymbols": {
+      "IBandProtocol": [
+        88
+      ]
+    },
+    "id": 89,
+    "license": "AGPL-3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 56,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "37:31:6"
+      },
+      {
+        "id": 57,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "69:33:6"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 88,
+        "linearizedBaseContracts": [
+          88
+        ],
+        "name": "IBandProtocol",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IBandProtocol.ReferenceData",
+            "id": 64,
+            "members": [
+              {
+                "constant": false,
+                "id": 59,
+                "mutability": "mutable",
+                "name": "rate",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 64,
+                "src": "249:12:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 58,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "249:7:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 61,
+                "mutability": "mutable",
+                "name": "lastUpdatedBase",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 64,
+                "src": "320:23:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 60,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "320:7:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 63,
+                "mutability": "mutable",
+                "name": "lastUpdatedQuote",
+                "nodeType": "VariableDeclaration",
+                "overrides": null,
+                "scope": 64,
+                "src": "414:24:6",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 62,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "414:7:6",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "ReferenceData",
+            "nodeType": "StructDefinition",
+            "scope": 88,
+            "src": "218:289:6",
+            "visibility": "public"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 65,
+              "nodeType": "StructuredDocumentation",
+              "src": "513:82:6",
+              "text": "Returns the price data for the given base/quote pair. Revert if not available."
+            },
+            "functionSelector": "65555bcc",
+            "id": 74,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getReferenceData",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 70,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 67,
+                  "mutability": "mutable",
+                  "name": "_base",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 74,
+                  "src": "626:19:6",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 66,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "626:6:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 69,
+                  "mutability": "mutable",
+                  "name": "_quote",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 74,
+                  "src": "647:20:6",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 68,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "647:6:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "625:43:6"
+            },
+            "returnParameters": {
+              "id": 73,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 72,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 74,
+                  "src": "716:20:6",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_ReferenceData_$64_memory_ptr",
+                    "typeString": "struct IBandProtocol.ReferenceData"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 71,
+                    "name": "ReferenceData",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 64,
+                    "src": "716:13:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_ReferenceData_$64_storage_ptr",
+                      "typeString": "struct IBandProtocol.ReferenceData"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "715:22:6"
+            },
+            "scope": 88,
+            "src": "600:138:6",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 75,
+              "nodeType": "StructuredDocumentation",
+              "src": "744:76:6",
+              "text": "Similar to getReferenceData, but with multiple base/quote pairs at once."
+            },
+            "functionSelector": "e42a071b",
+            "id": 87,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getReferenceDataBulk",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 82,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 78,
+                  "mutability": "mutable",
+                  "name": "_bases",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 87,
+                  "src": "864:22:6",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "string[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 76,
+                      "name": "string",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "864:6:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage_ptr",
+                        "typeString": "string"
+                      }
+                    },
+                    "id": 77,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "864:8:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                      "typeString": "string[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 81,
+                  "mutability": "mutable",
+                  "name": "_quotes",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 87,
+                  "src": "896:23:6",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_string_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "string[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 79,
+                      "name": "string",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "896:6:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_storage_ptr",
+                        "typeString": "string"
+                      }
+                    },
+                    "id": 80,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "896:8:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_string_storage_$dyn_storage_ptr",
+                      "typeString": "string[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "854:71:6"
+            },
+            "returnParameters": {
+              "id": 86,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 85,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 87,
+                  "src": "949:22:6",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_ReferenceData_$64_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct IBandProtocol.ReferenceData[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "contractScope": null,
+                      "id": 83,
+                      "name": "ReferenceData",
+                      "nodeType": "UserDefinedTypeName",
+                      "referencedDeclaration": 64,
+                      "src": "949:13:6",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_ReferenceData_$64_storage_ptr",
+                        "typeString": "struct IBandProtocol.ReferenceData"
+                      }
+                    },
+                    "id": 84,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "949:15:6",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_ReferenceData_$64_storage_$dyn_storage_ptr",
+                      "typeString": "struct IBandProtocol.ReferenceData[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "948:24:6"
+            },
+            "scope": 88,
+            "src": "825:148:6",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 89,
+        "src": "104:871:6"
+      }
+    ],
+    "src": "37:939:6"
+  },
+  "contractName": "IBandProtocol",
+  "dependencies": [],
+  "offset": [
+    104,
+    975
+  ],
+  "sha1": "11c526172e4840ce34af494f4066db654cfe4305",
+  "source": "// SPDX-License-Identifier: AGPL-3.0\npragma solidity >=0.6.0 <0.7.0;\npragma experimental ABIEncoderV2;\n\ninterface IBandProtocol {\n    /// A structure returned whenever someone requests for standard reference data.\n    struct ReferenceData {\n        uint256 rate; // base/quote exchange rate, multiplied by 1e18.\n        uint256 lastUpdatedBase; // UNIX epoch of the last time when base price gets updated.\n        uint256 lastUpdatedQuote; // UNIX epoch of the last time when quote price gets updated.\n    }\n\n    /// Returns the price data for the given base/quote pair. Revert if not available.\n    function getReferenceData(string memory _base, string memory _quote)\n        external\n        view\n        returns (ReferenceData memory);\n\n    /// Similar to getReferenceData, but with multiple base/quote pairs at once.\n    function getReferenceDataBulk(\n        string[] memory _bases,\n        string[] memory _quotes\n    ) external view returns (ReferenceData[] memory);\n}\n",
+  "type": "interface"
+}

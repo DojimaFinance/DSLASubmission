@@ -1,0 +1,139 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "getPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "ast": {
+    "absolutePath": "interfaces/ipriceoracle.sol",
+    "exportedSymbols": {
+      "IPriceOracle": [
+        959
+      ]
+    },
+    "id": 960,
+    "license": "AGPL-3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 952,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "37:31:10"
+      },
+      {
+        "id": 953,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "69:33:10"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 959,
+        "linearizedBaseContracts": [
+          959
+        ],
+        "name": "IPriceOracle",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "98d5fdca",
+            "id": 958,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getPrice",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 954,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "150:2:10"
+            },
+            "returnParameters": {
+              "id": 957,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 956,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 958,
+                  "src": "176:7:10",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 955,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "176:7:10",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "175:9:10"
+            },
+            "scope": 959,
+            "src": "133:52:10",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 960,
+        "src": "104:83:10"
+      }
+    ],
+    "src": "37:151:10"
+  },
+  "contractName": "IPriceOracle",
+  "dependencies": [],
+  "offset": [
+    104,
+    187
+  ],
+  "sha1": "6f23422bfac4fb67be58a7f59999f781d3586fd9",
+  "source": "// SPDX-License-Identifier: AGPL-3.0\npragma solidity >=0.6.0 <0.7.0;\npragma experimental ABIEncoderV2;\n\ninterface IPriceOracle {\n    function getPrice() external view returns (uint256);\n}\n",
+  "type": "interface"
+}
