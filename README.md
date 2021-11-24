@@ -16,3 +16,6 @@ Option Factory (optionFactory.sol)
 Sales Contract (SaleContract.sol)
 - Options create through the option factory are sold through here allowing users to purchase ERC20 tokens which give them the right to excercise options. The price options are sold at is specified in the option factory when creating the intial option and locking away the funds in escrow 
 
+For high level diagrams of how option factory can be used can be seen here : https://github.com/DojimaFinance/DSLASubmission/blob/master/DSLA_info.pdf
+
+Additionally through brownie the commands in https://github.com/DojimaFinance/DSLASubmission/blob/master/deployOptionFactories.txt can be run to show an example of an option being created -> sold -> and then executed by the option holder 
