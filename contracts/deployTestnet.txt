@@ -1,7 +1,0 @@
-brownie console
-
-
-
-f = open("flatLendFactory.sol", "w")
-f.write(lendFactory.get_verification_info()["flattened_source"])
-f.close()

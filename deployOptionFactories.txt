@@ -1,6 +1,6 @@
 brownie console
 
-accounts.load("dev")
+#accounts.load("dev")
 token = Token.deploy("Stable1", "USDA", {"from": accounts[0]})
 base = Token.deploy("Stable2", "USDX", {"from": accounts[0]})
 base.mint(accounts[0], {"from": accounts[0]})
@@ -34,4 +34,3 @@ buyAddress = optVault.buyerAddress()
 buyerOption = buyerERC20.at(buyAddress)
 token.approve(buyerOption, 10000000)
 buyerOption.excerciseAll({"from": accounts[0]})
-optVault.withdrawFunds(token, {"from": accounts[0]})
