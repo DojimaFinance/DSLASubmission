@@ -136,7 +136,7 @@ contract optionVaultSimple is Ownable {
             require(expired() == true);
         }
         //collateralProvided = true;
-        require(timeBeforeDeadline < expiryTime, "Must be some time for holders to execute options");
+        require(timeBeforeDeadline <= expiryTime, "Must be some time for holders to execute options");
         deadline = (block.timestamp).add(expiryTime);
         earlyExecute = deadline.sub(timeBeforeDeadline);
 
@@ -148,7 +148,7 @@ contract optionVaultSimple is Ownable {
         optionsIssued = true;
         collateralProvided = true;
         buyerToken.approve(salesContract, _amtOwed);
-        launchSale(buyerAddress, address(short), buyerToken.totalSupply(),  _amtRaised, 0, _amtRaised, _saleTime);
+        launchSale(buyerAddress, address(short), buyerToken.totalSupply(),  _amtRaised, 0, buyerToken.totalSupply(), _saleTime);
         
 
     }
@@ -191,7 +191,7 @@ contract optionVaultSimple is Ownable {
     function excerciseOption() external {
         require(msg.sender == address(buyer)); 
         require(collateralProvided == true);
-        require(block.timestamp >= earlyExecute);
+        //require(block.timestamp >= earlyExecute);
         require(block.timestamp <= deadline);
         short.transferFrom(msg.sender, address(this), amtOwed);
         if (useVault == true){
@@ -205,7 +205,7 @@ contract optionVaultSimple is Ownable {
         require(msg.sender == address(buyer)); 
         require(_amt <= amtOwed);
         require(collateralProvided == true);
-        require(block.timestamp >= earlyExecute);
+        //require(block.timestamp >= earlyExecute);
         require(block.timestamp <= deadline);
         uint256 percentRepaid = _amt.mul(BPS_adj).div(amtOwed);
         uint256 redeemAmt = collatAmt.mul(percentRepaid).div(BPS_adj);
